@@ -256,7 +256,7 @@
         </section>
 
         <section id="gallery" style="display: none;">
-            <h2>Photo Gallery</h2>
+            <h2>PHOTO GALLERY</h2>
             <div class="gallery">
                 <img src="path/to/image1.jpg" alt="Gallery Image 1">
                 <img src="path/to/image2.jpg" alt="Gallery Image 2">
@@ -303,28 +303,30 @@
         }
 
         function toggleSection() {
-            var detailsSection = document.getElementById("details");
-            var contactsSection = document.getElementById("contacts");
-            var gallerySection = document.getElementById("gallery");
-            var switchButton = document.querySelector(".switch");
+    var detailsSection = document.getElementById("details");
+    var contactsSection = document.getElementById("contacts");
+    var gallerySection = document.getElementById("gallery");
+    var switchButton = document.querySelector(".switch");
 
-            if (detailsSection.style.display === "block") {
-                detailsSection.style.display = "none";
-                contactsSection.style.display = "block";
-                gallerySection.style.display = "none";
-                switchButton.innerHTML = "Contacts";
-            } else if (contactsSection.style.display === "block") {
-                detailsSection.style.display = "none";
-                contactsSection.style.display = "none";
-                gallerySection.style.display = "block";
-                switchButton.innerHTML = "Gallery";
-            } else {
-                detailsSection.style.display = "block";
-                contactsSection.style.display = "none";
-                gallerySection.style.display = "none";
-                switchButton.innerHTML = "Details";
-            }
-        }
+    if (detailsSection.style.display === "block") {
+        detailsSection.style.display = "none";
+        contactsSection.style.display = "block";
+        gallerySection.style.display = "none";
+        switchButton.innerHTML = "Contacts"; // Change switch name to "Contacts"
+    } else if (contactsSection.style.display === "block") {
+        detailsSection.style.display = "none";
+        contactsSection.style.display = "none";
+        gallerySection.style.display = "block";
+        switchButton.innerHTML = "Gallery"; // Change switch name to "Gallery"
+    } else {
+        detailsSection.style.display = "block";
+        contactsSection.style.display = "none";
+        gallerySection.style.display = "none";
+        switchButton.innerHTML = "Details"; // Change switch name to "Details"
+    }
+    switchButton.innerText = switchButton.innerHTML; // Force update for some browsers
+}
+
 
         function showDetails(skill, details) {
     var modalText = document.getElementById("modal-text");
